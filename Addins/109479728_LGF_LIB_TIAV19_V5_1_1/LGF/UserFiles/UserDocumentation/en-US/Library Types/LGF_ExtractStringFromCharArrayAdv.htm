@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html><html lang='en-US'>
+<head>
+<script src='../../../Code2Docu/katex/katex.min.js'></script>
+<script src='../../../Code2Docu/katex/katexStartUp.js'></script>
+<link rel='stylesheet' href='../../../Code2Docu/katex/katex.min.css' />
+<!--[if lt IE 9]><script src='../../../Code2Docu/katex/html5shiv-printshiv-3.7.3.min.js'></script><![endif]-->
+<link rel='stylesheet' href='../../../Code2Docu/highlightJS/scl.css'>
+<script src='../../../Code2Docu/highlightJS/highlight.pack.js'></script>
+<script src='../../../Code2Docu/highlightJS/scl.js'></script>
+<script src='../../../Code2Docu/Code2DocuScript.js'></script>
+<script type='text/javascript'>
+hljs.registerLanguage('scl', window.hljsDefineSCL);
+hljs.initHighlightingOnLoad();
+</script>
+<link rel='stylesheet' href='../../../Code2Docu/style.css'>
+<link rel='stylesheet' href='../../../Code2Docu/styleCustomized.css'>
+<meta http-equiv='Content-type' content='text/html;charset=UTF-8'>
+<title>LGF_ExtractStringFromCharArrayAdv (FC / V1.1.0)</title>
+</head>
+<body>
+ <div class="containerFluid"> 
+ <h1>LGF_ExtractStringFromCharArrayAdv (FC / V1.1.0)</h1>
+<div class='langSelectionBox'>
+<a href='..\..\en-US\Folders\LGF.htm' target='_self'>Overview</a> 
+<select class='langSelector' id='langSelector' onChange=changeLang('en-US')>
+<option class='langOption' value=en-US selected>English (United States)</option>
+<option class='langOption' value=de-DE>German (Germany)</option>
+</select></div></div><hr>
+<span class='author'>Author: Siemens Online Support</span>
+<h2>Short description</h2>
+<p>The function extracts a String specified by a text before and after from an array of characters with extended options.</p>
+
+<h3>Block Interface</h3>
+<table class='block'><thead><tr><th colspan='2'> </th><th colspan='5'>LGF_ExtractStringFromCharArrayAdv (FC)</th><th colspan='2'> </th></tr></thead><tbody>
+<tr class='in return'><td rowspan='2'>String</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>textBefore</td><td rowspan='2'>&nbsp;</td><td rowspan='2'>Ret_Val</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>Word</td></tr>
+<tr class='in return interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in out'><td rowspan='2'>String</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>textAfter</td><td rowspan='2'>&nbsp;</td><td rowspan='2'>extractedString</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>String</td></tr>
+<tr class='in out interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in out'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>includeBeforeAfter</td><td rowspan='2'>&nbsp;</td><td rowspan='2'>position</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>DInt</td></tr>
+<tr class='in out interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in out'><td rowspan='2'>DInt</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>startPos</td><td rowspan='2'>&nbsp;</td><td rowspan='2'>length</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>Int</td></tr>
+<tr class='in out interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class=' out'><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td><td rowspan='2'>&nbsp;</td><td rowspan='2'>status</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>Word</td></tr>
+<tr class='out interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='inOut'><td rowspan='2'>Variant</td><td>&nbsp;</td><td>&nbsp;</td><td colspan='3'>searchIn</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>Variant</td></tr>
+<tr class='inOut interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+</tbody><tfoot><tr><td colspan='2'>&nbsp;</td><td colspan='5'>&nbsp;</td><td colspan='2'>&nbsp;</td></tr></tfoot></table>
+<h3>Input parameter</h3>
+<table class='BlockInterface'><thead><tr><th class='name'>Identifier</th><th class='type'>Data type</th>
+<th>Description</th></tr></thead><tbody>
+<tr><td>textBefore</td><td>String</td>
+<td>Text in front of the characters which has to be extracted</td></tr>
+<tr><td>textAfter</td><td>String</td>
+<td>Text behind the characters which has to be extracted</td></tr>
+<tr><td>includeBeforeAfter</td><td>Bool</td>
+<td>TRUE: `textBefore` and `textAfter` are included in the extracted string</td></tr>
+<tr><td>startPos</td><td>DInt</td>
+<td>Position within the array to start search from (index zero based)</td></tr>
+</tbody></table>
+<h3>Output parameter</h3>
+<table class='BlockInterface'><thead><tr><th class='name'>Identifier</th><th class='type'>Data type</th>
+<th>Description</th></tr></thead><tbody>
+<tr class='return'><td>Ret_Val</td><td>Word</td>
+<td>Return value: 16#0000-16#7FFF: Status of the FB<br>16#8000-16#FFFF: Error identification (see following Table)</td></tr>
+<tr><td>extractedString</td><td>String</td>
+<td>Extracted string</td></tr>
+<tr><td>position</td><td>DInt</td>
+<td>Position (index) within the array where text begins (index zero based)</td></tr>
+<tr><td>length</td><td>Int</td>
+<td>Length of text that was extracted</td></tr>
+<tr><td>status</td><td>Word</td>
+<td>16#0000-16#7FFF: Status of the FB<br>16#8000-16#FFFF: Error identification (see following Table)</td></tr>
+</tbody></table>
+<h3>In/Out parameter</h3>
+<table class='BlockInterface'><thead><tr><th class='name'>Identifier</th><th class='type'>Data type</th>
+<th>Description</th></tr></thead><tbody>
+<tr><td>searchIn</td><td>Variant</td>
+<td>Array of Character or Byte to search in</td></tr>
+</tbody></table>
+<h3>Status & Error codes</h3>
+<table class='StatusAndErrorConstants'><thead><tr><th>Code / Value</th><th>Identifier / Description</th></tr></thead><tbody>
+<tr><td>16#0000</td><td>STATUS_TEXT_FOUND<br>Successful, start text and end text were found</td></tr>
+<tr><td>16#0000</td><td>STATUS_NO_ERROR<br>Status: Execution finished without errors</td></tr>
+<tr><td>16#8200</td><td>ERR_NO_ARRAY<br>Error: No array of Char or Byte is present at the input `searchIn`</td></tr>
+<tr><td>16#9001</td><td>WARNING_ONLY_START<br>Unsuccessful, only start text was found, extracted String is filled with characters after start text</td></tr>
+<tr><td>16#9002</td><td>WARNING_NOTHING_FOUND<br>Unsuccessful, neither text was found</td></tr>
+</tbody></table>
+<h2>Change log</h2>
+<table class='ChangeLog'><thead><tr><th colspan='2'>Version & Date</th><th>Change description</th></tr></thead><tbody>
+<tr class='LogEntryStart'><td></td><td>01.00.00</td><td>Siemens Online Support</td></tr>
+<tr><td></td><td>01.04.2019</td><td>First released version (LHttp)</td></tr>
+<tr class='LogEntryStart'><td></td><td>01.01.00</td><td>Siemens Online Support</td></tr>
+<tr><td></td><td>10.06.2022</td><td>Adaption and integration into LGF</td></tr>
+</tbody></table>
+<hr>
+<p class='footer'>
+<a href='https://support.industry.siemens.com/cs/ww/en/view/109479728' target='_blank'>Library of General Functions (LGF) for SIMATIC S7-1200 / S7-1500</a><br>
+<span>Entry-ID: 109479728</span>
+<span>Date: 01/2024</span>
+<span>Version: V5.1.1</span>
+<span>Generated with TIA Portal Add-In
+<a href='https://support.industry.siemens.com/cs/ww/en/view/109809007' target='_blank'>Code2Docu</a>
+</span>
+</p>
+</body></html>

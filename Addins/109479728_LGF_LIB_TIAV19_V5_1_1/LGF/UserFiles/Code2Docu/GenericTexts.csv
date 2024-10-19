@@ -1,0 +1,57 @@
+﻿TextIdKey;en-US;de-DE
+DescriptionFunction;Functional description;Funktionsbeschreibung
+DescriptionShort;Short description;Kurzbeschreibung
+Block;Interface description;Schnittstellenbeschreibung
+BlockInterface;Block interface;Baustein Schnittstelle
+BlockIn;Input parameter;Input Parameter
+BlockOut;Output parameter;Output Parameter
+BlockInOut;In/Out parameter;In/Out Parameter
+BlockStatus;Status & Error codes;Status & Error Meldungen
+BlockStatusCode;Code / Value;Code / Wert
+BlockStatusDescription;Identifier / Description;Bezeichner / Beschreibung
+TagTableExtension;(Global constants);(Globale Konstanten)
+TagTableConstants;Constant identifier, values and description;Konstanten Bezeichner, Werte und Beschreibung
+UDTParameter;Parameter description;Parameterbeschreibung
+UdtReferncesInBlock;User defined datatype(s);Benutzer definierte Datentypen
+Parameter;Identifier;Bezeichner
+DataType;Data type;Datentyp
+DefaultValue;Default value;Default Wert
+Value;Value;Wert
+Description;Description;Beschreibung
+Supervisions;ProDiag Supervisions;ProDiag Supervisions
+SupervisedParameter;Supervised Parameter;Überwachter Parameter
+Trigger;Trigger;Trigger
+SupervisionType;Type;Überwachungsart
+SupervisionTypeAction;Action;Aktion
+SupervisionTypeInterlock;Interlock;Verriegelung
+SupervisionTypeMessageError;Error message;Fehlermeldung
+SupervisionTypeMessageText;Text message;Textmeldung
+SupervisionTypeOperand;Operand;Operand
+SupervisionTypePosition;Position;Position
+SupervisionTypeReaction;Reaction;Reaktion
+SupervisionCategory;Category;Kategorie
+SupervisionCategorySeparator;/;/
+SupervisionDefaultCategory;-;-
+ChangeLog;Change log;Änderungshistorie
+ChangeLogVersionDate;Version & Date;Version & Datum
+ChangeLogDescription;Change description;Änderungsbeschreibung
+EntryId;Entry-ID;Beitrags Nummer
+ProjectId;Project-ID;Projekt Nummer
+Name;Identifier;Bezeichner
+NameAndValue;Identifier & Value;Bezeichner & Wert
+Date;Date;Datum
+Version;Version;Version
+Appendix;Appendix;Anhang
+FolderProgramm;Program blocks;Programm Bausteine
+FolderTags;PLC tags & constants;PLC Variablen und Konstanten
+FolderUDT;PLC data types;PLC Datentypen
+ReturnValCommentIfVoid;Void - Function has no return value;Void - Funktion hat keinen Rückgabewert
+Author;Author;Autor
+BlockStatic;Retain static parameter;Remanente Statische Parameter
+Retain;Retain;Retain
+XRetain;\u2713;\u2713
+XNonRetain;X;X
+XSetInIDB;O;O
+Code2DocuAppExampleText;Generated with TIA Portal Add-In;Generiert mit TIA Portal Add-In
+Code2DocuAppName;Code2Docu;Code2Docu
+HomePage;Overview;Übersicht

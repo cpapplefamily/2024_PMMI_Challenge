@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html><html lang='en-US'>
+<head>
+<script src='../../../Code2Docu/katex/katex.min.js'></script>
+<script src='../../../Code2Docu/katex/katexStartUp.js'></script>
+<link rel='stylesheet' href='../../../Code2Docu/katex/katex.min.css' />
+<!--[if lt IE 9]><script src='../../../Code2Docu/katex/html5shiv-printshiv-3.7.3.min.js'></script><![endif]-->
+<link rel='stylesheet' href='../../../Code2Docu/highlightJS/scl.css'>
+<script src='../../../Code2Docu/highlightJS/highlight.pack.js'></script>
+<script src='../../../Code2Docu/highlightJS/scl.js'></script>
+<script src='../../../Code2Docu/Code2DocuScript.js'></script>
+<script type='text/javascript'>
+hljs.registerLanguage('scl', window.hljsDefineSCL);
+hljs.initHighlightingOnLoad();
+</script>
+<link rel='stylesheet' href='../../../Code2Docu/style.css'>
+<link rel='stylesheet' href='../../../Code2Docu/styleCustomized.css'>
+<meta http-equiv='Content-type' content='text/html;charset=UTF-8'>
+<title>LGF_CompareString (FC / V1.0.0)</title>
+</head>
+<body>
+ <div class="containerFluid"> 
+ <h1>LGF_CompareString (FC / V1.0.0)</h1>
+<div class='langSelectionBox'>
+<a href='..\..\en-US\Folders\LGF.htm' target='_self'>Overview</a> 
+<select class='langSelector' id='langSelector' onChange=changeLang('en-US')>
+<option class='langOption' value=en-US selected>English (United States)</option>
+<option class='langOption' value=de-DE>German (Germany)</option>
+</select></div></div><hr>
+<span class='author'>Author: Siemens Industry Support</span>
+<h2>Short description</h2>
+<p>Compares two strings and returns a number which indicates the result of the comparison.</p>
+
+<h3>Block Interface</h3>
+<table class='block'><thead><tr><th colspan='2'> </th><th colspan='5'>LGF_CompareString (FC)</th><th colspan='2'> </th></tr></thead><tbody>
+<tr class='return'><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td><td rowspan='2'>&nbsp;</td><td rowspan='2'>Ret_Val</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>SInt</td></tr>
+<tr class='return interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='inOut'><td rowspan='2'>String</td><td>&nbsp;</td><td>&nbsp;</td><td colspan='3'>left</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>String</td></tr>
+<tr class='inOut interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='inOut'><td rowspan='2'>String</td><td>&nbsp;</td><td>&nbsp;</td><td colspan='3'>right</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>String</td></tr>
+<tr class='inOut interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+</tbody><tfoot><tr><td colspan='2'>&nbsp;</td><td colspan='5'>&nbsp;</td><td colspan='2'>&nbsp;</td></tr></tfoot></table>
+<h3>Output parameter</h3>
+<table class='BlockInterface'><thead><tr><th class='name'>Identifier</th><th class='type'>Data type</th>
+<th>Description</th></tr></thead><tbody>
+<tr class='return'><td>Ret_Val</td><td>SInt</td>
+<td>Return values:<br>left < right := -1;<br>left > right := 1;<br>left == right := 0;</td></tr>
+</tbody></table>
+<h3>In/Out parameter</h3>
+<table class='BlockInterface'><thead><tr><th class='name'>Identifier</th><th class='type'>Data type</th>
+<th>Description</th></tr></thead><tbody>
+<tr><td>left</td><td>String</td>
+<td>Left / first string to compare</td></tr>
+<tr><td>right</td><td>String</td>
+<td>Right / second string to compare</td></tr>
+</tbody></table>
+<h3>Status & Error codes</h3>
+<table class='StatusAndErrorConstants'><thead><tr><th>Code / Value</th><th>Identifier / Description</th></tr></thead><tbody>
+<tr><td>0</td><td>RETURN_STRINGS_ARE_EQUAL<br>Strings are equal</td></tr>
+<tr><td>1</td><td>RETURN_STRING_LEFT_GREATER_THAN_RIGHT<br>Left string is greater than right string</td></tr>
+<tr><td>-1</td><td>RETURN_STRING_LEFT_LESS_THAN_RIGHT<br>Left string is less than right string</td></tr>
+</tbody></table>
+<h2>Change log</h2>
+<table class='ChangeLog'><thead><tr><th colspan='2'>Version & Date</th><th>Change description</th></tr></thead><tbody>
+<tr class='LogEntryStart'><td></td><td>01.00.00</td><td>Siemens Industry Support</td></tr>
+<tr><td></td><td>10-06-2022</td><td>First released version</td></tr>
+</tbody></table>
+<hr>
+<p class='footer'>
+<a href='https://support.industry.siemens.com/cs/ww/en/view/109479728' target='_blank'>Library of General Functions (LGF) for SIMATIC S7-1200 / S7-1500</a><br>
+<span>Entry-ID: 109479728</span>
+<span>Date: 01/2024</span>
+<span>Version: V5.1.1</span>
+<span>Generated with TIA Portal Add-In
+<a href='https://support.industry.siemens.com/cs/ww/en/view/109809007' target='_blank'>Code2Docu</a>
+</span>
+</p>
+</body></html>

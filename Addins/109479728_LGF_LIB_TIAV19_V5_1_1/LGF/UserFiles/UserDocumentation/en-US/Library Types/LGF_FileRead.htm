@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html><html lang='en-US'>
+<head>
+<script src='../../../Code2Docu/katex/katex.min.js'></script>
+<script src='../../../Code2Docu/katex/katexStartUp.js'></script>
+<link rel='stylesheet' href='../../../Code2Docu/katex/katex.min.css' />
+<!--[if lt IE 9]><script src='../../../Code2Docu/katex/html5shiv-printshiv-3.7.3.min.js'></script><![endif]-->
+<link rel='stylesheet' href='../../../Code2Docu/highlightJS/scl.css'>
+<script src='../../../Code2Docu/highlightJS/highlight.pack.js'></script>
+<script src='../../../Code2Docu/highlightJS/scl.js'></script>
+<script src='../../../Code2Docu/Code2DocuScript.js'></script>
+<script type='text/javascript'>
+hljs.registerLanguage('scl', window.hljsDefineSCL);
+hljs.initHighlightingOnLoad();
+</script>
+<link rel='stylesheet' href='../../../Code2Docu/style.css'>
+<link rel='stylesheet' href='../../../Code2Docu/styleCustomized.css'>
+<meta http-equiv='Content-type' content='text/html;charset=UTF-8'>
+<title>LGF_FileRead (FB / V1.0.0)</title>
+</head>
+<body>
+ <div class="containerFluid"> 
+ <h1>LGF_FileRead (FB / V1.0.0)</h1>
+<div class='langSelectionBox'>
+<a href='..\..\en-US\Folders\LGF.htm' target='_self'>Overview</a> 
+<select class='langSelector' id='langSelector' onChange=changeLang('en-US')>
+<option class='langOption' value=en-US selected>English (United States)</option>
+<option class='langOption' value=de-DE>German (Germany)</option>
+</select></div></div><hr>
+<span class='author'>Author: Siemens SIMATIC Systems Support</span>
+<h2>Short description</h2>
+<p>This function block offers reading data as binary / serialized data stream from files stored on the PLC's memory card in the folder <code>UserFiles</code>.</p>
+
+<h3>Block Interface</h3>
+<table class='block'><thead><tr><th colspan='2'> </th><th colspan='5'>LGF_FileRead (FB)</th><th colspan='2'> </th></tr></thead><tbody>
+<tr class='in out'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>execute</td><td rowspan='2'>&nbsp;</td><td rowspan='2'>done</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>Bool</td></tr>
+<tr class='in out interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in out'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>dataLengthMustMatch</td><td rowspan='2'>&nbsp;</td><td rowspan='2'>busy</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>Bool</td></tr>
+<tr class='in out interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in out'><td rowspan='2'>String</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>fileName</td><td rowspan='2'>&nbsp;</td><td rowspan='2'>error</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>Bool</td></tr>
+<tr class='in out interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class=' out'><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td><td rowspan='2'>&nbsp;</td><td rowspan='2'>status</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>Word</td></tr>
+<tr class='out interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class=' out'><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td><td rowspan='2'>&nbsp;</td><td rowspan='2'>dataLength</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>DInt</td></tr>
+<tr class='out interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class=' out'><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td><td rowspan='2'>&nbsp;</td><td rowspan='2'>diagnostics</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>LGF_typeDiagnostics</td></tr>
+<tr class='out interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='inOut'><td rowspan='2'>Array[*] of Byte</td><td>&nbsp;</td><td>&nbsp;</td><td colspan='3'>bufferByteArray</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>Array[*] of Byte</td></tr>
+<tr class='inOut interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='inOut'><td rowspan='2'>Variant</td><td>&nbsp;</td><td>&nbsp;</td><td colspan='3'>data</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>Variant</td></tr>
+<tr class='inOut interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+</tbody><tfoot><tr><td colspan='2'>&nbsp;</td><td colspan='5'>&nbsp;</td><td colspan='2'>&nbsp;</td></tr></tfoot></table>
+<h3>Input parameter</h3>
+<table class='BlockInterface'><thead><tr><th class='name'>Identifier</th><th class='type'>Data type</th>
+<th class='default'>Default value</th>
+<th>Description</th></tr></thead><tbody>
+<tr><td>execute</td><td>Bool</td>
+<td>FALSE</td>
+<td>Rising edge starts file read once</td></tr>
+<tr><td>dataLengthMustMatch</td><td>Bool</td>
+<td>FALSE</td>
+<td>TRUE: The length of the file data set and the dataset in the PLC have to match.</td></tr>
+<tr><td>fileName</td><td>String</td>
+<td>''</td>
+<td>Name of file including path: `UserFiles/test.dat`</td></tr>
+</tbody></table>
+<h3>Output parameter</h3>
+<table class='BlockInterface'><thead><tr><th class='name'>Identifier</th><th class='type'>Data type</th>
+<th>Description</th></tr></thead><tbody>
+<tr><td>done</td><td>Bool</td>
+<td>TRUE: Commanded functionality has been completed successfully</td></tr>
+<tr><td>busy</td><td>Bool</td>
+<td>TRUE: FB is not finished and new output values can be expected</td></tr>
+<tr><td>error</td><td>Bool</td>
+<td>TRUE: An error occurred during the execution of the FB</td></tr>
+<tr><td>status</td><td>Word</td>
+<td>16#0000 - 16#7FFF: Status of the FB, 16#8000 - 16#FFFF: Error identification</td></tr>
+<tr><td>dataLength</td><td>DInt</td>
+<td>Data length read from file (serialized length of `data`)</td></tr>
+<tr><td>diagnostics</td><td>LGF_typeDiagnostics</td>
+<td>Diagnostic structure to store and transfer diagnostic information from blocks trough the interface.</td></tr>
+</tbody></table>
+<h3>In/Out parameter</h3>
+<table class='BlockInterface'><thead><tr><th class='name'>Identifier</th><th class='type'>Data type</th>
+<th>Description</th></tr></thead><tbody>
+<tr><td>bufferByteArray</td><td>Array[*] of Byte</td>
+<td>Byte array buffer for read / write from / to file</td></tr>
+<tr><td>data</td><td>Variant</td>
+<td>Data set read from file</td></tr>
+</tbody></table>
+<h3>Status & Error codes</h3>
+<table class='StatusAndErrorConstants'><thead><tr><th>Code / Value</th><th>Identifier / Description</th></tr></thead><tbody>
+<tr><td>16#0000</td><td>STATUS_EXECUTION_FINISHED<br>Execution finished without errors</td></tr>
+<tr><td>16#7000</td><td>STATUS_NO_CALL<br>No job being currently processed</td></tr>
+<tr><td>16#7001</td><td>STATUS_FIRST_CALL<br>First call after incoming new job (rising edge 'execute')</td></tr>
+<tr><td>16#7002</td><td>STATUS_SUBSEQUENT_CALL<br>Subsequent call during active processing without further details</td></tr>
+<tr><td>16#8201</td><td>ERR_BUFFER_LOWERBOUND<br>Error: Buffer array lower bound
+Lower bound has to be 0</td></tr>
+<tr><td>16#8202</td><td>ERR_BUFFER_ARRAY_TO_SMALL_TO_COPY<br>Error: Buffer size less than needed size for data</td></tr>
+<tr><td>16#8401</td><td>ERR_FILE_PATH<br>Error: File path error: File path has to start with 'UserFiles/'.</td></tr>
+<tr><td>16#8411</td><td>ERR_FILE_SIZE_GRATER_THEN_DATA_SIZE<br>Error: File length and Data length dose not match!</td></tr>
+<tr><td>16#8412</td><td>ERR_FILE_SIZE_LESS_THEN_DATA_SIZE<br>Error: File length and Data length dose not match!</td></tr>
+<tr><td>16#8600</td><td>ERR_UNDEFINED_STATE<br>Error due to an undefined state in state machine</td></tr>
+<tr><td>16#8601</td><td>ERR_MOVE_BLK_VARIANT<br>Error: Move block variant (buffer to data) - see `diagnostics.subFunctionStatus`</td></tr>
+<tr><td>16#8602</td><td>ERR_DATA_SERIALIZE<br>Error: Serialize data - see `diagnostics.subFunctionStatus`</td></tr>
+<tr><td>16#8603</td><td>ERR_DATA_DESERIALIZE<br>Error: Deserialize data - see `diagnostics.subFunctionStatus`</td></tr>
+<tr><td>16#8604</td><td>ERR_FILE_READ_INIT<br>Error: Read file from SMC - see `diagnostics.subFunctionStatus`</td></tr>
+<tr><td>16#8605</td><td>ERR_FILE_READ<br>Error: Read file from SMC - see `diagnostics.subFunctionStatus`</td></tr>
+</tbody></table>
+<h2>User defined datatype(s)</h2>
+<h3>LGF_typeDiagnostics (UDT / V1.0.0)</h3>
+<p>Diagnostic structure to store and transfer diagnostic information from blocks trough the interface.</p>
+
+<table class='UDT'>
+  <thead>
+    <tr>
+      <th colspan='1' class='name'>Identifier</th>
+      <th class='type'>Data type</th>
+      <th class='default'>Default value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>status</td>
+    <td class='type'>Word</td>
+    <td class='default'>16#0000</td>
+    <td>Status of the Block or error identification when error occurred</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>subfunctionStatus</td>
+    <td class='type'>Word</td>
+    <td class='default'>16#0000</td>
+    <td>Status or return value of called FB's, FC's and system blocks</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>stateNumber</td>
+    <td class='type'>DInt</td>
+    <td class='default'>0</td>
+    <td>State in the state machine of the block where the error occurred</td>
+  </tr>
+  </tbody>
+</table>
+<h2>Functional description</h2>
+<p>With the function <code>LGF_FileRead</code> a file can be read into the data budget of a variable at <code>data</code>. To read the data it is necessary to deserialize it, which the function already takes from the user.<br />
+For deserialization an external buffer in the form of a byte array must be connected which can take up the amount of data, if the buffer is too small an error is output.</p>
+<p>The file name must always be specified in full together with the folder name and the file extension in the following format: <code>UserFiles/test.dat</code>.</p>
+
+<h2>Change log</h2>
+<table class='ChangeLog'><thead><tr><th colspan='2'>Version & Date</th><th>Change description</th></tr></thead><tbody>
+<tr class='LogEntryStart'><td></td><td>01.00.00</td><td>Simatic Systems Support</td></tr>
+<tr><td></td><td>19.02.2023</td><td>First released version</td></tr>
+</tbody></table>
+<hr>
+<p class='footer'>
+<a href='https://support.industry.siemens.com/cs/ww/en/view/109479728' target='_blank'>Library of General Functions (LGF) for SIMATIC S7-1200 / S7-1500</a><br>
+<span>Entry-ID: 109479728</span>
+<span>Date: 01/2024</span>
+<span>Version: V5.1.1</span>
+<span>Generated with TIA Portal Add-In
+<a href='https://support.industry.siemens.com/cs/ww/en/view/109809007' target='_blank'>Code2Docu</a>
+</span>
+</p>
+</body></html>

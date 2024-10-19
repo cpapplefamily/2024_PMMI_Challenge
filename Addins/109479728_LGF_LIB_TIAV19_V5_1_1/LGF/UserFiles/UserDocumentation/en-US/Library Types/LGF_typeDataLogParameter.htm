@@ -1,0 +1,92 @@
+<!DOCTYPE html><html lang='en-US'>
+<head>
+<script src='../../../Code2Docu/katex/katex.min.js'></script>
+<script src='../../../Code2Docu/katex/katexStartUp.js'></script>
+<link rel='stylesheet' href='../../../Code2Docu/katex/katex.min.css' />
+<!--[if lt IE 9]><script src='../../../Code2Docu/katex/html5shiv-printshiv-3.7.3.min.js'></script><![endif]-->
+<link rel='stylesheet' href='../../../Code2Docu/highlightJS/scl.css'>
+<script src='../../../Code2Docu/highlightJS/highlight.pack.js'></script>
+<script src='../../../Code2Docu/highlightJS/scl.js'></script>
+<script src='../../../Code2Docu/Code2DocuScript.js'></script>
+<script type='text/javascript'>
+hljs.registerLanguage('scl', window.hljsDefineSCL);
+hljs.initHighlightingOnLoad();
+</script>
+<link rel='stylesheet' href='../../../Code2Docu/style.css'>
+<link rel='stylesheet' href='../../../Code2Docu/styleCustomized.css'>
+<meta http-equiv='Content-type' content='text/html;charset=UTF-8'>
+<title>LGF_typeDataLogParameter (UDT / V1.0.0)</title>
+</head><body>
+ <div class="containerFluid"> 
+ <h1>LGF_typeDataLogParameter (UDT / V1.0.0)</h1>
+<div class='langSelectionBox'>
+<a href='..\..\en-US\Folders\LGF.htm' target='_self'>Overview</a> 
+<select class='langSelector' id='langSelector' onChange=changeLang('en-US')>
+<option class='langOption' value=en-US selected>English (United States)</option>
+<option class='langOption' value=de-DE>German (Germany)</option>
+</select></div></div><hr>
+<h2>Description</h2>
+<p>This UDT belongs to the Module <code>LGF_DataLogC</code> and lists all possible parameter to configure its behaviour.</p>
+
+<h2>Parameter description</h2>
+<table class='UDT'><thead><tr><th colspan='1' class='name'>Identifier</th><th class='type'>Data type</th><th class='default'>Default value</th><th>Description</th></tr></thead><tbody>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>header</td>
+    <td class='type'>String</td>
+    <td class='default'>''</td>
+    <td>Headline of datalog, string of all data fields, separated by a comma: "field1,field2,field3,..."</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>maxNumberOfEntries</td>
+    <td class='type'>UDInt</td>
+    <td class='default'>1000</td>
+    <td>Maximum number of entries in datalog</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>timestampFormat</td>
+    <td class='type'>USInt</td>
+    <td class='default'>0</td>
+    <td>Timestamp format - see manual in "DataLogCreate" for used PLC Type (S7-1200 or S7-1500)</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>clearOnOpen</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Clear datalog during opening datalog while enabling block</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>deleteFile</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Delete as well datalog file during datalog delete</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>enableRingBuffer</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>TRUE: Overwrite old values and start from the beginning if datalog reaches its maximum entries<br>FALSE: Stop logging if `maxNumberOfEntries` entries reached</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>loggingByInterval</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>TRUE: Log on interval time parameter<br>FALSE: log on "triggerEntry"</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>loggingInterval</td>
+    <td class='type'>Time</td>
+    <td class='default'>T#1M</td>
+    <td>Time for automatic logging interval</td>
+  </tr>
+</tbody></table>
+<hr>
+<p class='footer'>
+<a href='https://support.industry.siemens.com/cs/ww/en/view/109479728' target='_blank'>Library of General Functions (LGF) for SIMATIC S7-1200 / S7-1500</a><br>
+<span>Entry-ID: 109479728</span>
+<span>Date: 01/2024</span>
+<span>Version: V5.1.1</span>
+<span>Generated with TIA Portal Add-In
+<a href='https://support.industry.siemens.com/cs/ww/en/view/109809007' target='_blank'>Code2Docu</a>
+</span>
+</p>
+</body></html>

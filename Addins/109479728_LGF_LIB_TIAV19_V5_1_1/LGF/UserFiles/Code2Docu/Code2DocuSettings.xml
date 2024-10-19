@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<Settings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <CleanUpExportFolderPriorToExport>true</CleanUpExportFolderPriorToExport>
+  <CleanUpDocuFolderPriorToRendering>true</CleanUpDocuFolderPriorToRendering>
+  <CompilePriorToExport>false</CompilePriorToExport>
+  <ExportUdts>true</ExportUdts>
+  <ExportGlobalTagTables>true</ExportGlobalTagTables>
+  <OverwriteStyleSheet>true</OverwriteStyleSheet>
+  <OverwriteCode2DocuScript>true</OverwriteCode2DocuScript>
+  <OverwriteTextFile>true</OverwriteTextFile>
+  <ShowExtendedLogOutput>false</ShowExtendedLogOutput>
+  <ExportSingleDoc>true</ExportSingleDoc>
+  <ExportFullDoc>true</ExportFullDoc>
+  <GenerateBlockChangelog>true</GenerateBlockChangelog>
+  <GenerateFullChangelog>true</GenerateFullChangelog>
+  <GenerateChangelogFile>true</GenerateChangelogFile>
+  <ImageRootPath />
+  <RemoveLeadingNumberInFolderName>true</RemoveLeadingNumberInFolderName>
+  <BlockPinTableNamesOutside>false</BlockPinTableNamesOutside>
+  <ShowReturnValueIfVoid>true</ShowReturnValueIfVoid>
+  <IncludeUdtInBlockDoc>true</IncludeUdtInBlockDoc>
+  <IncludeUdtInDoc>true</IncludeUdtInDoc>
+  <IncludeNestedUdtInUdt>true</IncludeNestedUdtInUdt>
+  <IncludeConstantsInDoc>true</IncludeConstantsInDoc>
+  <IncludeRetainInDoc>true</IncludeRetainInDoc>
+  <GenerateSupervisionsTable>true</GenerateSupervisionsTable>
+  <RenderSupervisionCategoriesInline>false</RenderSupervisionCategoriesInline>
+  <ShowDefaultSupervisionCategory>false</ShowDefaultSupervisionCategory>
+  <DisplayPredefinedValuesParameterTable>false</DisplayPredefinedValuesParameterTable>
+  <DisplayPredefinedValuesBlockImage>false</DisplayPredefinedValuesBlockImage>
+  <SupervisionSettingsFileName>SupervisionSettings.dat</SupervisionSettingsFileName>
+  <SupervisionSettingsFileExportErrorMessage>false</SupervisionSettingsFileExportErrorMessage>
+  <SortOverallChangelogFile>false</SortOverallChangelogFile>
+  <ChangelogIsPartOfAppendix>true</ChangelogIsPartOfAppendix>
+  <ExportJustSelected>false</ExportJustSelected>
+  <OverwriteChangelog>false</OverwriteChangelog>
+  <RootFolderName>LGF</RootFolderName>
+  <ActiveLanguage />
+  <ReferenceLanguage>en-us</ReferenceLanguage>
+  <Languages>
+    <Languages>en-us</Languages>
+    <Languages>de-de</Languages>
+  </Languages>
+  <ExcludeNames>
+    <ExcludeName>excludenameinlowercase</ExcludeName>
+    <ExcludeName>group_1</ExcludeName>
+  </ExcludeNames>
+</Settings>

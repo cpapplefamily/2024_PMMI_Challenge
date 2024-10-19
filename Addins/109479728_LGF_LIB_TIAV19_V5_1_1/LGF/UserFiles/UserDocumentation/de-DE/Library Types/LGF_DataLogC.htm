@@ -1,0 +1,290 @@
+﻿<!DOCTYPE html><html lang='de-DE'>
+<head>
+<script src='../../../Code2Docu/katex/katex.min.js'></script>
+<script src='../../../Code2Docu/katex/katexStartUp.js'></script>
+<link rel='stylesheet' href='../../../Code2Docu/katex/katex.min.css' />
+<!--[if lt IE 9]><script src='../../../Code2Docu/katex/html5shiv-printshiv-3.7.3.min.js'></script><![endif]-->
+<link rel='stylesheet' href='../../../Code2Docu/highlightJS/scl.css'>
+<script src='../../../Code2Docu/highlightJS/highlight.pack.js'></script>
+<script src='../../../Code2Docu/highlightJS/scl.js'></script>
+<script src='../../../Code2Docu/Code2DocuScript.js'></script>
+<script type='text/javascript'>
+hljs.registerLanguage('scl', window.hljsDefineSCL);
+hljs.initHighlightingOnLoad();
+</script>
+<link rel='stylesheet' href='../../../Code2Docu/style.css'>
+<link rel='stylesheet' href='../../../Code2Docu/styleCustomized.css'>
+<meta http-equiv='Content-type' content='text/html;charset=UTF-8'>
+<title>LGF_DataLogC (FB / V1.0.0)</title>
+</head>
+<body>
+ <div class="containerFluid"> 
+ <h1>LGF_DataLogC (FB / V1.0.0)</h1>
+<div class='langSelectionBox'>
+<a href='..\..\de-DE\Folders\LGF.htm' target='_self'>Übersicht</a> 
+<select class='langSelector' id='langSelector' onChange=changeLang('de-DE')>
+<option class='langOption' value=en-US>English (United States)</option>
+<option class='langOption' value=de-DE selected>German (Germany)</option>
+</select></div></div><hr>
+<span class='author'>Autor: Siemens Industry Support</span>
+<h2>Kurzbeschreibung</h2>
+<p>Die Funktion LGF_DataLogC (C -&gt; Compact) integriert alle Funktionen des Datenlog-Systems und kann als eigenständiger Datenlogger verwendet werden.</p>
+
+<h3>Baustein Schnittstelle</h3>
+<table class='block'><thead><tr><th colspan='2'> </th><th colspan='5'>LGF_DataLogC (FB)</th><th colspan='2'> </th></tr></thead><tbody>
+<tr class='in out'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>enable</td><td rowspan='2'>&nbsp;</td><td rowspan='2'>valid</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>Bool</td></tr>
+<tr class='in out interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in out'><td rowspan='2'>String</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>name</td><td rowspan='2'>&nbsp;</td><td rowspan='2'>busy</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>Bool</td></tr>
+<tr class='in out interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in out'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>triggerLogEntry</td><td rowspan='2'>&nbsp;</td><td rowspan='2'>error</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>Bool</td></tr>
+<tr class='in out interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in out'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>clearLog</td><td rowspan='2'>&nbsp;</td><td rowspan='2'>status</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>Word</td></tr>
+<tr class='in out interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in out'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>deleteLog</td><td rowspan='2'>&nbsp;</td><td rowspan='2'>writeEntryDone</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>Bool</td></tr>
+<tr class='in out interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in out'><td rowspan='2'>LGF_typeDataLogParameter</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>parameter</td><td rowspan='2'>&nbsp;</td><td rowspan='2'>clearLogDone</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>Bool</td></tr>
+<tr class='in out interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class=' out'><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td><td rowspan='2'>&nbsp;</td><td rowspan='2'>deleteLogDone</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>Bool</td></tr>
+<tr class='out interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class=' out'><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td><td rowspan='2'>&nbsp;</td><td rowspan='2'>lastEntryReached</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>Bool</td></tr>
+<tr class='out interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class=' out'><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td><td rowspan='2'>&nbsp;</td><td rowspan='2'>noOfEntries</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>UDInt</td></tr>
+<tr class='out interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class=' out'><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td><td rowspan='2'>&nbsp;</td><td rowspan='2'>diagnostics</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>LGF_typeDiagnostics</td></tr>
+<tr class='out interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='inOut'><td rowspan='2'>Variant</td><td>&nbsp;</td><td>&nbsp;</td><td colspan='3'>data</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>Variant</td></tr>
+<tr class='inOut interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+</tbody><tfoot><tr><td colspan='2'>&nbsp;</td><td colspan='5'>&nbsp;</td><td colspan='2'>&nbsp;</td></tr></tfoot></table>
+<h3>Input Parameter</h3>
+<table class='BlockInterface'><thead><tr><th class='name'>Bezeichner</th><th class='type'>Datentyp</th>
+<th class='default'>Default Wert</th>
+<th>Beschreibung</th></tr></thead><tbody>
+<tr><td>enable</td><td>Bool</td>
+<td>FALSE</td>
+<td>TRUE: Aktiviert die Funktionalität des FB</td></tr>
+<tr><td>name</td><td>String</td>
+<td>'DefaultDataLog'</td>
+<td>Name des Datenlogs, auch als Dateiname verwendet</td></tr>
+<tr><td>triggerLogEntry</td><td>Bool</td>
+<td>FALSE</td>
+<td>Steigende Flanke löst einen Eintrag im Datenlog aus (nur wenn `parameter.isLoggingByInterval` := FALSE)</td></tr>
+<tr><td>clearLog</td><td>Bool</td>
+<td>FALSE</td>
+<td>Steigende Flanke triggert das Löschen der Datenprotokolldatei</td></tr>
+<tr><td>deleteLog</td><td>Bool</td>
+<td>FALSE</td>
+<td>Steigende Flanke löst Löschen der Datenprotokolldatei aus, falls vorhanden</td></tr>
+<tr><td>parameter</td><td>LGF_typeDataLogParameter</td>
+<td>---</td>
+<td>Dieser UDT gehört zum Module `LGF_DataLogC` und listet alle möglichen Parameter zur Konfiguration des Verhaltens auf.</td></tr>
+</tbody></table>
+<h3>Output Parameter</h3>
+<table class='BlockInterface'><thead><tr><th class='name'>Bezeichner</th><th class='type'>Datentyp</th>
+<th>Beschreibung</th></tr></thead><tbody>
+<tr><td>valid</td><td>Bool</td>
+<td>TRUE: Ausgabewerte am FB gültig</td></tr>
+<tr><td>busy</td><td>Bool</td>
+<td>TRUE: FB ist aktive und neue Ausgabewerte können erwartet werden.</td></tr>
+<tr><td>error</td><td>Bool</td>
+<td>FALSE: Kein Fehler / TRUE: Während der Ausführung des FB ist ein Fehler aufgetreten</td></tr>
+<tr><td>status</td><td>Word</td>
+<td>16#0000-16#7FFF: Status des FB / 16#8000-16#FFFF: Fehleridentifikation (siehe folgende Tabelle)</td></tr>
+<tr><td>writeEntryDone</td><td>Bool</td>
+<td>TRUE: DataLog-Schreiben erfolgreich durchgeführt</td></tr>
+<tr><td>clearLogDone</td><td>Bool</td>
+<td>TRUE: DataLog löschen erfolgreich abgeschlossen</td></tr>
+<tr><td>deleteLogDone</td><td>Bool</td>
+<td>TRUE: DataLog löschen erfolgreich durchgeführt</td></tr>
+<tr><td>lastEntryReached</td><td>Bool</td>
+<td>TRUE: Letzter Eintrag des Datenprotokolls erreicht, wenn `enableRingBuffer` gesetzt ist, von Anfang an starten, sonst endet der Block hier</td></tr>
+<tr><td>noOfEntries</td><td>UDInt</td>
+<td>Anzahl der Einträge im Datenprotokoll</td></tr>
+<tr><td>diagnostics</td><td>LGF_typeDiagnostics</td>
+<td>Diagnosestruktur zur Speicherung und Übertragung von Diagnoseinformationen von Blöcken über die Schnittstelle.</td></tr>
+</tbody></table>
+<h3>In/Out Parameter</h3>
+<table class='BlockInterface'><thead><tr><th class='name'>Bezeichner</th><th class='type'>Datentyp</th>
+<th>Beschreibung</th></tr></thead><tbody>
+<tr><td>data</td><td>Variant</td>
+<td>Datenstruktur für die Protokollierung in der Datalog-Datei</td></tr>
+</tbody></table>
+<h3>Remanente Statische Parameter</h3>
+<table class='BlockInterface'><thead><tr><th class='name'>Bezeichner</th><th class='type'>Datentyp</th>
+<th class='retain'>Retain</th>
+<th>Beschreibung</th></tr></thead><tbody>
+<tr><td>statNoOfEntries</td><td>UDInt</td><td class='retain'>✓</td><td>Anzahl der Einträge im Datenprotokoll</td></tr>
+<tr><td>statLlastEntryReached</td><td>Bool</td><td class='retain'>✓</td><td>TRUE: Letzter Eintrag des Datenprotokolls erreicht, wenn `enableRingBuffer` gesetzt ist, Start von Anfang, sonst endet der Block hier</td></tr>
+</tbody></table>
+<h3>Status & Error Meldungen</h3>
+<table class='StatusAndErrorConstants'><thead><tr><th>Code / Wert</th><th>Bezeichner / Beschreibung</th></tr></thead><tbody>
+<tr><td>16#0000</td><td>STATUS_FINISHED_NO_ERROR<br>KEIN Fehler beim Aufruf aufgetreten / Aktive Bearbeitung</td></tr>
+<tr><td>16#7000</td><td>STATUS_NO_CALL<br>Kein Auftrag wird gerade bearbeitet</td></tr>
+<tr><td>16#7001</td><td>STATUS_FIRST_CALL<br>Erster Aufruf nach Eingang eines neuen Auftrags (steigende Flanke `enable`)</td></tr>
+<tr><td>16#7002</td><td>STATUS_SUBSEQUENT_CALL<br>Nachfolgender Aufruf bei aktiver Verarbeitung ohne weitere Angaben</td></tr>
+<tr><td>16#7010</td><td>STATUS_MAX_ENTRIES_REACHED<br>Maximum Anzahl der Einträge erreicht</td></tr>
+<tr><td>16#8401</td><td>ERR_WRONG_COMMAND_CALL_ORDER<br>Fehler: Falsche Befehlsaufrufreihenfolge - `deleteLog` oder `clearLog` muss beim Starten / Aktivieren des Bausteins FALSE sein</td></tr>
+<tr><td>16#8600</td><td>ERR_UNDEFINED_STATE<br>Fehler aufgrund eines undefinierten Zustands in der Zustandsmaschine</td></tr>
+<tr><td>16#8601</td><td>ERR_DATALOG_OPEN<br>Fehler: `DataLogOpen` führt zu einem Fehler, siehe `diagnostics.subFunctionStatus` in der Diagnosestruktur für weitere Informationen</td></tr>
+<tr><td>16#8602</td><td>ERR_DATALOG_CREATE<br>Fehler: `DataLogCreate` löst einen Fehler aus, bitte sehen Sie `diagnostics.subFunctionStatus` in der Diagnosestruktur für weitere Informationen</td></tr>
+<tr><td>16#8603</td><td>ERR_DATALOG_CLOSE<br>Fehler: `DataLogClose` löst einen Fehler aus, bitte sehen Sie `diagnostics.subFunctionStatus` in der Diagnosestruktur für weitere Informationen</td></tr>
+<tr><td>16#8604</td><td>ERR_DATALOG_WRITE<br>Fehler: `DataLogWrite` löst einen Fehler aus, bitte siehe `diagnostics.subFunctionStatus` in der Diagnosestruktur für weitere Informationen</td></tr>
+<tr><td>16#8605</td><td>ERR_DATALOG_CLEAR<br>Fehler: `DataLogClear` führt zu einem Fehler, siehe `diagnostics.subFunctionStatus` in der Diagnosestruktur für weitere Informationen</td></tr>
+<tr><td>16#8605</td><td>ERR_DATALOG_DELETE<br>Fehler: `DataLogDelete` löst einen Fehler aus, bitte sehen Sie `diagnostics.subFunctionStatus` in der Diagnosestruktur für weitere Informationen</td></tr>
+</tbody></table>
+<h2>Benutzer definierte Datentypen</h2>
+<h3>LGF_typeDataLogParameter (UDT / V1.0.0)</h3>
+<p>Dieser UDT gehört zum Module <code>LGF_DataLogC</code> und listet alle möglichen Parameter zur Konfiguration des Verhaltens auf.</p>
+
+<table class='UDT'>
+  <thead>
+    <tr>
+      <th colspan='1' class='name'>Bezeichner</th>
+      <th class='type'>Datentyp</th>
+      <th class='default'>Default Wert</th>
+      <th>Beschreibung</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>header</td>
+    <td class='type'>String</td>
+    <td class='default'>''</td>
+    <td>Überschrift des Datenprotokolls, String aller Datenfelder, getrennt durch einen Komma: "field1,field2,field3,..."</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>maxNumberOfEntries</td>
+    <td class='type'>UDInt</td>
+    <td class='default'>1000</td>
+    <td>Maximale Anzahl von Einträgen im Datenprotokoll</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>timestampFormat</td>
+    <td class='type'>USInt</td>
+    <td class='default'>0</td>
+    <td>Zeitstempelformat - siehe Handbuch unter "DataLogCreate" für den verwendeten SPS-Typ (S7-1200 oder S7-1500)</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>clearOnOpen</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Löschen des Datenprotokolls beim Öffnen des Datenprotokolls während der Aktivierung der Sperre</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>deleteFile</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Beim Löschen des Datenprotokolls auch die Datenprotokolldatei löschen</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>enableRingBuffer</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>TRUE: Überschreibe alte Werte und beginne von vorne, wenn das Datenprotokoll seine maximalen Einträge erreicht<br>FALSE: Stoppe die Aufzeichnung, wenn `maxNumberOfEntries` Einträge erreicht</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>loggingByInterval</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>TRUE: Loggen bei Intervall Zeitparameter<br>FALSE: loggen bei "triggerEntry"</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>loggingInterval</td>
+    <td class='type'>Time</td>
+    <td class='default'>T#1M</td>
+    <td>Zeit für automatisches Logging-Intervall</td>
+  </tr>
+  </tbody>
+</table>
+<h3>LGF_typeDiagnostics (UDT / V1.0.0)</h3>
+<p>Diagnosestruktur zur Speicherung und Übertragung von Diagnoseinformationen von Blöcken über die Schnittstelle.</p>
+
+<table class='UDT'>
+  <thead>
+    <tr>
+      <th colspan='1' class='name'>Bezeichner</th>
+      <th class='type'>Datentyp</th>
+      <th class='default'>Default Wert</th>
+      <th>Beschreibung</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>status</td>
+    <td class='type'>Word</td>
+    <td class='default'>16#0000</td>
+    <td>Status des Bausteins oder Fehleridentifikation beim Auftreten des Fehlers</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>subfunctionStatus</td>
+    <td class='type'>Word</td>
+    <td class='default'>16#0000</td>
+    <td>Status oder Rückgabewert von aufgerufenen FB's, FC's und Systembausteinen</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>stateNumber</td>
+    <td class='type'>DInt</td>
+    <td class='default'>0</td>
+    <td>Zustand in der Zustandsmaschine des Blocks, in dem der Fehler aufgetreten ist</td>
+  </tr>
+  </tbody>
+</table>
+<h2>Funktionsbeschreibung</h2>
+<p>Die Funktion <code>LGF_DataLogC</code> kombiniert die Systemfunktionen zum Erzeugen und Schreiben von Datalogs in einem Baustein.</p>
+<p>Der Ablauf sieht vor, dass ein bestehendes Datalog anhand des Namens (<code>name</code>) geöffnet wird, wurde es zuvor nicht angelegt wird dieses erkannt und die Funktion legt das Datalog an.</p>
+<p>Anschließend wird je nach Parametrierung der Datenhaushalt an <code>data</code> in einem einstellbaren Interval geschrieben oder aber nur auf Anforderung an <code>triggerLogEntry</code>.</p>
+<hr class='predecessorDefList' />
+<dl class='LIESMICH'>
+<dt>Lies mich</dt>
+<dd>
+<p>Die Funktionsweise von Datalogs können sie dem Anwenderhandbuch entnehmen:</p>
+<ul>
+<li><code>DataLogCreate</code></li>
+<li><code>DataLogOpen</code></li>
+<li><code>DataLogClose</code></li>
+<li><code>DataLogWrite</code></li>
+<li><code>DataLogClear</code></li>
+<li><code>DataLogDelete</code></li>
+</ul>
+</dd>
+</dl>
+<hr class='predecessorDefList' />
+<dl class='ACHTUNG'>
+<dt>Achtung</dt>
+<dd>
+<p>Die folgenden Parameter sind nur beim Anlegen eines Datalogs wirksam:</p>
+<ul>
+<li><code>parameter.header</code></li>
+<li><code>parameter.maxNumberOfEntries</code></li>
+<li><code>parameter.timestampFormat</code> (S7-1200 und die S7-1500 unterstützen verschiedenen Formate, siehe dazu im Handbuch <code>DataLogCreate</code>)</li>
+</ul>
+</dd>
+</dl>
+<hr class='predecessorDefList' />
+<dl class='ACHTUNG'>
+<dt>Achtung</dt>
+<dd>Beim Loggen von Daten per Intervall (<code>isLoggingByInterval</code>) treten Zeitliche varianzen auf, die durch eine schwankende Zyklus Zeit hervorgerufen werden.</dd>
+<dd>Es empfiehlt sich daher die Funktion, neben dem Aufruf im zyklischen Programm, in einem Zeit Interrupt OB aufzurufen und in diesem den Trigger zum Schreiben zu setzen.</dd>
+</dl>
+<hr class='predecessorDefList' />
+<dl class='ACHTUNG'>
+<dt>Achtung</dt>
+<dd>Ein Datalog welches durch die Funktion gelöscht wird, ohne die Datei zu löschen, kann nicht wieder angelegt werden solange die Datei existiert, sie muss zuerst von Hand im System gelöscht werden.</dd>
+<dd>Beachten Sie hierfür auch den Parameter <code>parameter.deleteFile</code> der bei einem löschbefehlt <code>deleteLog</code> auch die Datei neben den Daten ablöscht.</dd>
+</dl>
+
+<h2>Änderungshistorie</h2>
+<table class='ChangeLog'><thead><tr><th colspan='2'>Version & Datum</th><th>Änderungsbeschreibung</th></tr></thead><tbody>
+<tr class='LogEntryStart'><td></td><td>01.00.00</td><td>Simatic Systems Support</td></tr>
+<tr><td></td><td>19.02.2022</td><td>First released version</td></tr>
+</tbody></table>
+<hr>
+<p class='footer'>
+<a href='https://support.industry.siemens.com/cs/ww/de/view/109479728' target='_blank'>Library of General Functions (LGF) für SIMATIC S7-1200 / S7-1500</a><br>
+<span>Beitrags Nummer: 109479728</span>
+<span>Datum: 01/2024</span>
+<span>Version: V5.1.1</span>
+<span>Generiert mit TIA Portal Add-In
+<a href='https://support.industry.siemens.com/cs/ww/en/view/109809007' target='_blank'>Code2Docu</a>
+</span>
+</p>
+</body></html>

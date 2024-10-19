@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html><html lang='en-US'>
+<head>
+<script src='../../../Code2Docu/katex/katex.min.js'></script>
+<script src='../../../Code2Docu/katex/katexStartUp.js'></script>
+<link rel='stylesheet' href='../../../Code2Docu/katex/katex.min.css' />
+<!--[if lt IE 9]><script src='../../../Code2Docu/katex/html5shiv-printshiv-3.7.3.min.js'></script><![endif]-->
+<link rel='stylesheet' href='../../../Code2Docu/highlightJS/scl.css'>
+<script src='../../../Code2Docu/highlightJS/highlight.pack.js'></script>
+<script src='../../../Code2Docu/highlightJS/scl.js'></script>
+<script src='../../../Code2Docu/Code2DocuScript.js'></script>
+<script type='text/javascript'>
+hljs.registerLanguage('scl', window.hljsDefineSCL);
+hljs.initHighlightingOnLoad();
+</script>
+<link rel='stylesheet' href='../../../Code2Docu/style.css'>
+<link rel='stylesheet' href='../../../Code2Docu/styleCustomized.css'>
+<meta http-equiv='Content-type' content='text/html;charset=UTF-8'>
+<title>LGF_ReadPnInterfaceParameter (FB / V1.0.0)</title>
+</head>
+<body>
+ <div class="containerFluid"> 
+ <h1>LGF_ReadPnInterfaceParameter (FB / V1.0.0)</h1>
+<div class='langSelectionBox'>
+<a href='..\..\en-US\Folders\LGF.htm' target='_self'>Overview</a> 
+<select class='langSelector' id='langSelector' onChange=changeLang('en-US')>
+<option class='langOption' value=en-US selected>English (United States)</option>
+<option class='langOption' value=de-DE>German (Germany)</option>
+</select></div></div><hr>
+<span class='author'>Author: Siemens Industry Support</span>
+<h2>Short description</h2>
+<p>The function block provides Interface parameter like the IP Address settings, MAC Address and the PN Name.</p>
+
+<h3>Block Interface</h3>
+<table class='block'><thead><tr><th colspan='2'> </th><th colspan='5'>LGF_ReadPnInterfaceParameter (FB)</th><th colspan='2'> </th></tr></thead><tbody>
+<tr class='in out'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>execute</td><td rowspan='2'>&nbsp;</td><td rowspan='2'>done</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>Bool</td></tr>
+<tr class='in out interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in out'><td rowspan='2'>HW_ANY</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>hardwareId</td><td rowspan='2'>&nbsp;</td><td rowspan='2'>busy</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>Bool</td></tr>
+<tr class='in out interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class=' out'><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td><td rowspan='2'>&nbsp;</td><td rowspan='2'>error</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>Bool</td></tr>
+<tr class='out interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class=' out'><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td><td rowspan='2'>&nbsp;</td><td rowspan='2'>status</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>DWord</td></tr>
+<tr class='out interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class=' out'><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td><td rowspan='2'>&nbsp;</td><td rowspan='2'>address</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>IP_V4</td></tr>
+<tr class='out interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class=' out'><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td><td rowspan='2'>&nbsp;</td><td rowspan='2'>subnetMask</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>IP_V4</td></tr>
+<tr class='out interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class=' out'><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td><td rowspan='2'>&nbsp;</td><td rowspan='2'>standardGateway</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>IP_V4</td></tr>
+<tr class='out interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class=' out'><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td><td rowspan='2'>&nbsp;</td><td rowspan='2'>macAddress</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>Array[0..5] of Byte</td></tr>
+<tr class='out interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class=' out'><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td><td rowspan='2'>&nbsp;</td><td rowspan='2'>pnName</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>String</td></tr>
+<tr class='out interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+</tbody><tfoot><tr><td colspan='2'>&nbsp;</td><td colspan='5'>&nbsp;</td><td colspan='2'>&nbsp;</td></tr></tfoot></table>
+<h3>Input parameter</h3>
+<table class='BlockInterface'><thead><tr><th class='name'>Identifier</th><th class='type'>Data type</th>
+<th class='default'>Default value</th>
+<th>Description</th></tr></thead><tbody>
+<tr><td>execute</td><td>Bool</td>
+<td>FALSE</td>
+<td>Rising edge starts action once</td></tr>
+<tr><td>hardwareId</td><td>HW_ANY</td>
+<td>---</td>
+<td>Hardware ID of the Interface where the parameter should be read</td></tr>
+</tbody></table>
+<h3>Output parameter</h3>
+<table class='BlockInterface'><thead><tr><th class='name'>Identifier</th><th class='type'>Data type</th>
+<th>Description</th></tr></thead><tbody>
+<tr><td>done</td><td>Bool</td>
+<td>TRUE: Commanded functionality has been completed successfully</td></tr>
+<tr><td>busy</td><td>Bool</td>
+<td>TRUE: FB is not finished, new output values can be expected</td></tr>
+<tr><td>error</td><td>Bool</td>
+<td>TRUE: An error occurred during the execution of the FB</td></tr>
+<tr><td>status</td><td>DWord</td>
+<td>16#0000 - 16#7FFF: Status of the FB, 16#8000 - 16#FFFF: Error identification</td></tr>
+<tr><td>address</td><td>IP_V4</td>
+<td>IP Address from interface</td></tr>
+<tr><td>subnetMask</td><td>IP_V4</td>
+<td>Subnet mask from interface</td></tr>
+<tr><td>standardGateway</td><td>IP_V4</td>
+<td>Standard gateway address from interface</td></tr>
+<tr><td>macAddress</td><td>Array[0..5] of Byte</td>
+<td>MAC Address from interface</td></tr>
+<tr><td>pnName</td><td>String</td>
+<td>Profinet name from interface</td></tr>
+</tbody></table>
+<h3>Status & Error codes</h3>
+<table class='StatusAndErrorConstants'><thead><tr><th>Code / Value</th><th>Identifier / Description</th></tr></thead><tbody>
+<tr><td>16#0000</td><td>STATUS_EXECUTION_FINISHED<br>Execution finished without errors</td></tr>
+<tr><td>16#7000</td><td>STATUS_NO_CALL<br>No job being currently processed</td></tr>
+<tr><td>16#7001</td><td>STATUS_FIRST_CALL<br>First call after incoming new job (rising edge 'execute')</td></tr>
+<tr><td>16#7002</td><td>STATUS_SUBSEQUENT_CALL<br>Subsequent call during active processing without further details</td></tr>
+<tr><td>16#9000</td><td>ERR_UNDEFINED_STATE<br>Error: due to an undefined state in state machine</td></tr>
+</tbody></table>
+<h2>Functional description</h2>
+<p>The function reads the Interface settings / parameters using the system function <code>RDREC</code> (Read data record).</p>
+<p>To read the MAC and IP address of the interface provided via it's hardware ID,
+it is mandatory to read the <code>PD_INTERFACE_DATA_REAL</code> data record of any PROFINET compliant interface.</p>
+<hr class='predecessorDefList' />
+<dl class='NOTE'>
+<dt>Note</dt>
+<dd>Upon TIA Portal V17, it’s possible to use as well the system function <code>CommConfig</code>, which is in the <code>Instructions / Communication / Open user communication (Version &gt;= V8.1)</code> located.</dd>
+</dl>
+
+<h2>Change log</h2>
+<table class='ChangeLog'><thead><tr><th colspan='2'>Version & Date</th><th>Change description</th></tr></thead><tbody>
+<tr class='LogEntryStart'><td></td><td>01.00.00</td><td>Siemens Online Support</td></tr>
+<tr><td></td><td>2022-12-16</td><td>First released version</td></tr>
+</tbody></table>
+<hr>
+<p class='footer'>
+<a href='https://support.industry.siemens.com/cs/ww/en/view/109479728' target='_blank'>Library of General Functions (LGF) for SIMATIC S7-1200 / S7-1500</a><br>
+<span>Entry-ID: 109479728</span>
+<span>Date: 01/2024</span>
+<span>Version: V5.1.1</span>
+<span>Generated with TIA Portal Add-In
+<a href='https://support.industry.siemens.com/cs/ww/en/view/109809007' target='_blank'>Code2Docu</a>
+</span>
+</p>
+</body></html>

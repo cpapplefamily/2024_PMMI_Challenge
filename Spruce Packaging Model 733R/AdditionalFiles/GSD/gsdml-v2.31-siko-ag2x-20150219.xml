@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- ============================================================================================ -->
+<!--   SIKO DriveLine AG2X EPN                                                                        -->
+<!-- ============================================================================================ -->
+<ISO15745Profile xmlns="http://www.profibus.com/GSDML/2003/11/DeviceProfile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.profibus.com/GSDML/2003/11/DeviceProfile ..\xsd\GSDML-DeviceProfile-v2.31.xsd">
+  <ProfileHeader>
+    <ProfileIdentification>PROFINET Device Profile</ProfileIdentification>
+    <ProfileRevision>1.00</ProfileRevision>
+    <ProfileName>Device Profile for PROFINET Devices</ProfileName>
+    <ProfileSource>PROFIBUS Nutzerorganisation e. V. (PNO)</ProfileSource>
+    <ProfileClassID>Device</ProfileClassID>
+    <ISO15745Reference>
+      <ISO15745Part>4</ISO15745Part>
+      <ISO15745Edition>1</ISO15745Edition>
+      <ProfileTechnology>GSDML</ProfileTechnology>
+    </ISO15745Reference>
+  </ProfileHeader>
+  <ProfileBody>
+    <DeviceIdentity VendorID="0x02EB" DeviceID="0x0101">
+      <InfoText TextId="T_ID_DEV_DESCRIPTION"/>
+      <VendorName Value="SIKO GmbH"/>
+    </DeviceIdentity>
+    <DeviceFunction>
+      <Family MainFamily="Drives" ProductFamily="AG2X"/>
+    </DeviceFunction>
+    <ApplicationProcess>
+<!-- ============================================================================================ -->
+<!--   List of Device Access Points (DAP)                                                         -->
+<!-- ============================================================================================ -->
+      <DeviceAccessPointList>
+        <DeviceAccessPointItem ID="DAP" PhysicalSlots="0..6" ModuleIdentNumber="0x80010000" MinDeviceInterval="8" ImplementationType="NP40" DNS_CompatibleName="SIKO-AG2X" ExtendedAddressAssignmentSupported="true" FixedInSlots="0" ObjectUUID_LocalIndex="1" DeviceAccessSupported="true" WebServer="http:///" MultipleWriteSupported="true" NameOfStationNotTransferable="true" ParameterizationSpeedupSupported="true" LLDP_NoD_Supported="true" CheckDeviceID_Allowed="true" ResetToFactoryModes="2 8" RequiredSchemaVersion="V2.25" PNIO_Version="V2.31">
+          <ModuleInfo>
+            <Name TextId="T_ID_DAP"/>
+            <InfoText TextId="T_ID_DAP_DESCRIPTION"/>
+            <VendorName Value="SIKO GmbH"/>
+          </ModuleInfo>
+          <CertificationInfo ConformanceClass="C" ApplicationClass="" NetloadClass="III"/>
+          <SubslotList>
+            <SubslotItem SubslotNumber="32768" TextId="T_ID_SS_INTERFACE"/>
+            <SubslotItem SubslotNumber="32769" TextId="T_ID_SS_PORT1"/>
+            <SubslotItem SubslotNumber="32770" TextId="T_ID_SS_PORT2"/>
+          </SubslotList>
+          <IOConfigData MaxInputLength="1440" MaxOutputLength="1440"/>
+          <UseableModules>
+            <ModuleItemRef ModuleItemTarget="ID_MODULE_ADI2" FixedInSlots="1"/>
+            <ModuleItemRef ModuleItemTarget="ID_MODULE_ADI3" FixedInSlots="2"/>
+            <ModuleItemRef ModuleItemTarget="ID_MODULE_ADI1" FixedInSlots="3"/>
+            <ModuleItemRef ModuleItemTarget="ID_MODULE_ADI258" FixedInSlots="4"/>
+		<ModuleItemRef ModuleItemTarget="ID_MODULE_ADI259" FixedInSlots="5"/>
+		<ModuleItemRef ModuleItemTarget="ID_MODULE_ADI257" FixedInSlots="6"/>
+          </UseableModules>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="DAP" SubmoduleIdentNumber="0x00000001" Writeable_IM_Records="1 2 3 4">
+              <IOData IOPS_Length="1" IOCS_Length="1"/>
+               <!-- insert record data here -->
+ 	       <ModuleInfo>
+                 <Name TextId="T_ID_DAP"/>
+                 <InfoText TextId="T_ID_DAP_DESCRIPTION"/>
+               </ModuleInfo>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+          <SystemDefinedSubmoduleList>
+            <InterfaceSubmoduleItem ID="Interface" SubslotNumber="32768" SubmoduleIdentNumber="0x00000002" SupportedRT_Classes="RT_CLASS_1;RT_CLASS_2;RT_CLASS_3" TextId="T_ID_INTERFACE" SupportedProtocols="SNMP;LLDP" SupportedMibs="MIB2" DCP_HelloSupported="false" PTP_BoundarySupported="true" DCP_BoundarySupported="true" DelayMeasurementSupported="true">
+              <RT_Class3Properties StartupMode="Legacy;Advanced" ForwardingMode="Relative" MaxNumberIR_FrameData="128" MaxBridgeDelay="3100"/>
+              <SynchronisationMode SupportedRole="SyncSlave" T_PLL_MAX="1000" SupportedSyncProtocols="PTCP"/>
+              <ApplicationRelations StartupMode="Legacy;Advanced">
+                <TimingProperties SendClock="8 16 32 64 128" ReductionRatio="1 2 4 8 16 32 64 128 256 512"/>
+                <RT_Class3TimingProperties SendClock="8 16 32 64 128" ReductionRatio="1 2 4 8 16"/>
+              </ApplicationRelations>
+              <MediaRedundancy  SupportedRole="Client"/>
+            </InterfaceSubmoduleItem>
+            <PortSubmoduleItem ID="Port 1" SubslotNumber="32769" SubmoduleIdentNumber="0x00000003" MAUTypes="16" TextId="T_ID_PORT1" MaxPortRxDelay="209" MaxPortTxDelay="90" PortDeactivationSupported="true" LinkStateDiagnosisCapability="Up+Down" SupportsRingportConfig="true" IsDefaultRingport="true" CheckMAUTypeSupported="true"/>
+            <PortSubmoduleItem ID="Port 2" SubslotNumber="32770" SubmoduleIdentNumber="0x00000003" MAUTypes="16" TextId="T_ID_PORT2" MaxPortRxDelay="209" MaxPortTxDelay="90" PortDeactivationSupported="true" LinkStateDiagnosisCapability="Up+Down" SupportsRingportConfig="true" IsDefaultRingport="true" CheckMAUTypeSupported="true"/>
+          </SystemDefinedSubmoduleList>
+          <Graphics>
+            <GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="1"/>
+          </Graphics>
+        </DeviceAccessPointItem>
+       </DeviceAccessPointList>
+
+<!-- ============================================================================================ -->
+<!--   List of modules                                                                            -->
+<!-- ============================================================================================ -->
+      <ModuleList>
+        <!-- ADI 2 Control Word, data type = UINT16, direction = output -->
+        <ModuleItem ID="ID_MODULE_ADI2" ModuleIdentNumber="0x00000002">
+          <ModuleInfo CategoryRef="CAT_REF_OUT_MODULES">
+            <Name TextId="T_ID_MODULE_NAME_ADI2"/>
+            <InfoText TextId="T_ID_INFO_TEXT_ADI"/>
+          </ModuleInfo>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="ID_SUBMOD_ADI2_GROUP1_IN" SubmoduleIdentNumber="0x10000100" API="0" FixedInSubslots="1">
+              <IOData IOPS_Length="1" IOCS_Length="1">
+                <Output Consistency="All items consistency">
+                  <DataItem DataType="Unsigned16" TextId="T_ID_DATAITEM_ADI2_ELEMENT1"/>
+                </Output>
+              </IOData>
+              <ModuleInfo>
+                <Name TextId="T_ID_MODULE_NAME_ADI2"/>
+                <InfoText TextId="T_ID_SUBMOD_INFO_ELEMENT"/>
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+
+        <!-- ADI 3 Target Value, data type = SINT32, direction = output -->
+        <ModuleItem ID="ID_MODULE_ADI3" ModuleIdentNumber="0x00000003">
+          <ModuleInfo CategoryRef="CAT_REF_OUT_MODULES">
+            <Name TextId="T_ID_MODULE_NAME_ADI3"/>
+            <InfoText TextId="T_ID_INFO_TEXT_ADI"/>
+          </ModuleInfo>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="ID_SUBMOD_ADI3_GROUP1_OUT" SubmoduleIdentNumber="0x10000100" API="0" FixedInSubslots="1">
+              <IOData IOPS_Length="1" IOCS_Length="1">
+                <Output Consistency="All items consistency">
+                  <DataItem DataType="Integer32" TextId="T_ID_DATAITEM_ADI3_ELEMENT1"/>
+                </Output>
+              </IOData>
+              <ModuleInfo>
+                <Name TextId="T_ID_MODULE_NAME_ADI3"/>
+                <InfoText TextId="T_ID_SUBMOD_INFO_ELEMENT"/>
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+        
+	<!-- ADI 1 Digital Outputs, data type = UINT8, direction = output -->
+        <ModuleItem ID="ID_MODULE_ADI1" ModuleIdentNumber="0x00000001">
+          <ModuleInfo CategoryRef="CAT_REF_OUT_MODULES">
+            <Name TextId="T_ID_MODULE_NAME_ADI1"/>
+            <InfoText TextId="T_ID_INFO_TEXT_ADI"/>
+          </ModuleInfo>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="ID_SUBMOD_ADI1_GROUP1" SubmoduleIdentNumber="0x10000100" API="0" FixedInSubslots="1">
+              <IOData IOPS_Length="1" IOCS_Length="1">
+                <Output Consistency="All items consistency">
+                  <DataItem DataType="Unsigned8" TextId="T_ID_DATAITEM_ADI1_ELEMENT1"/>
+                </Output>
+              </IOData>
+              <ModuleInfo>
+                <Name TextId="T_ID_MODULE_NAME_ADI1"/>
+                <InfoText TextId="T_ID_SUBMOD_INFO_ELEMENT"/>
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+        
+        <!-- ADI 258 Status Word, data type = UINT16, direction = input -->
+        <ModuleItem ID="ID_MODULE_ADI258" ModuleIdentNumber="0x00000102">
+          <ModuleInfo CategoryRef="CAT_REF_IN_MODULES">
+            <Name TextId="T_ID_MODULE_NAME_ADI258"/>
+            <InfoText TextId="T_ID_INFO_TEXT_ADI"/>
+          </ModuleInfo>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="ID_SUBMOD_ADI258_GROUP1" SubmoduleIdentNumber="0x00000100" API="0" FixedInSubslots="1">
+              <IOData IOPS_Length="1" IOCS_Length="1">
+                <Input Consistency="All items consistency">
+                  <DataItem DataType="Unsigned16" TextId="T_ID_DATAITEM_ADI258_ELEMENT1"/>
+                </Input>
+              </IOData>
+              <ModuleInfo>
+                <Name TextId="T_ID_MODULE_NAME_ADI258"/>
+                <InfoText TextId="T_ID_SUBMOD_INFO_ELEMENT"/>
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+
+        <!-- ADI 259 Actual Value, data type = SINT32, direction = output -->
+        <ModuleItem ID="ID_MODULE_ADI259" ModuleIdentNumber="0x00000103">
+          <ModuleInfo CategoryRef="CAT_REF_IN_MODULES">
+            <Name TextId="T_ID_MODULE_NAME_ADI259"/>
+            <InfoText TextId="T_ID_INFO_TEXT_ADI"/>
+          </ModuleInfo>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="ID_SUBMOD_ADI259_GROUP1" SubmoduleIdentNumber="0x00000100" API="0" FixedInSubslots="1">
+              <IOData IOPS_Length="1" IOCS_Length="1">
+                <Input Consistency="All items consistency">
+                  <DataItem DataType="Integer32" TextId="T_ID_DATAITEM_ADI259_ELEMENT1"/>
+                </Input>
+              </IOData>
+              <ModuleInfo>
+                <Name TextId="T_ID_MODULE_NAME_ADI259"/>
+                <InfoText TextId="T_ID_SUBMOD_INFO_ELEMENT"/>
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+        
+       <!-- ADI 257 Digital Inputs, data type = UINT8, direction = output -->
+        <ModuleItem ID="ID_MODULE_ADI257" ModuleIdentNumber="0x00000101">
+          <ModuleInfo CategoryRef="CAT_REF_IN_MODULES">
+            <Name TextId="T_ID_MODULE_NAME_ADI257"/>
+            <InfoText TextId="T_ID_INFO_TEXT_ADI"/>
+          </ModuleInfo>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="ID_SUBMOD_ADI257_GROUP1" SubmoduleIdentNumber="0x00000100" API="0" FixedInSubslots="1">
+              <IOData IOPS_Length="1" IOCS_Length="1">
+                <Input Consistency="All items consistency">
+                  <DataItem DataType="Unsigned8" TextId="T_ID_DATAITEM_ADI257_ELEMENT1"/>
+                </Input>
+              </IOData>
+              <ModuleInfo>
+                <Name TextId="T_ID_MODULE_NAME_ADI257"/>
+                <InfoText TextId="T_ID_SUBMOD_INFO_ELEMENT"/>
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+      </ModuleList>
+ 		
+<!-- ============================================================================================ -->
+<!--   Diagnostic messages                                                                        -->
+<!-- ============================================================================================ -->
+      <ChannelDiagList>
+        <ChannelDiagItem ErrorType="262">
+          <Name TextId="T_ID_NAME_ERROR_TYPE_262" />
+          <Help TextId="T_ID_HELP_ERROR_TYPE_262" />
+	</ChannelDiagItem>
+      	<ChannelDiagItem ErrorType="263">
+          <Name TextId="T_ID_NAME_ERROR_TYPE_263" />
+          <Help TextId="T_ID_HELP_ERROR_TYPE_263" />
+	</ChannelDiagItem>
+	<ChannelDiagItem ErrorType="264">
+          <Name TextId="T_ID_NAME_ERROR_TYPE_264" />
+          <Help TextId="T_ID_HELP_ERROR_TYPE_264" />
+	</ChannelDiagItem>
+        <ChannelDiagItem ErrorType="265">
+          <Name TextId="T_ID_NAME_ERROR_TYPE_265" />
+          <Help TextId="T_ID_HELP_ERROR_TYPE_265" />
+	</ChannelDiagItem>
+	<ChannelDiagItem ErrorType="266">
+          <Name TextId="T_ID_NAME_ERROR_TYPE_266" />
+          <Help TextId="T_ID_HELP_ERROR_TYPE_266" />
+	</ChannelDiagItem>
+        <ChannelDiagItem ErrorType="267">
+          <Name TextId="T_ID_NAME_ERROR_TYPE_267" />
+          <Help TextId="T_ID_HELP_ERROR_TYPE_267" />
+	</ChannelDiagItem>
+	<ChannelDiagItem ErrorType="268">
+          <Name TextId="T_ID_NAME_ERROR_TYPE_268" />
+          <Help TextId="T_ID_HELP_ERROR_TYPE_268" />
+	</ChannelDiagItem>
+	<ChannelDiagItem ErrorType="269">
+          <Name TextId="T_ID_NAME_ERROR_TYPE_269" />
+          <Help TextId="T_ID_HELP_ERROR_TYPE_269" />
+	</ChannelDiagItem>
+	<ChannelDiagItem ErrorType="271">
+          <Name TextId="T_ID_NAME_ERROR_TYPE_271" />
+          <Help TextId="T_ID_HELP_ERROR_TYPE_271" />
+	</ChannelDiagItem>	
+	<ChannelDiagItem ErrorType="272">
+          <Name TextId="T_ID_NAME_ERROR_TYPE_272" />
+          <Help TextId="T_ID_HELP_ERROR_TYPE_272" />
+	</ChannelDiagItem>
+	<ChannelDiagItem ErrorType="275">
+          <Name TextId="T_ID_NAME_ERROR_TYPE_275" />
+          <Help TextId="T_ID_HELP_ERROR_TYPE_275" />
+	</ChannelDiagItem>
+	<ChannelDiagItem ErrorType="276">
+          <Name TextId="T_ID_NAME_ERROR_TYPE_276" />
+          <Help TextId="T_ID_HELP_ERROR_TYPE_276" />
+	</ChannelDiagItem>
+	<ChannelDiagItem ErrorType="277">
+          <Name TextId="T_ID_NAME_ERROR_TYPE_277" />
+          <Help TextId="T_ID_HELP_ERROR_TYPE_277" />
+	</ChannelDiagItem>
+	<ChannelDiagItem ErrorType="278">
+          <Name TextId="T_ID_NAME_ERROR_TYPE_278" />
+          <Help TextId="T_ID_HELP_ERROR_TYPE_278" />
+	</ChannelDiagItem>      
+</ChannelDiagList>
+
+      <GraphicsList>
+        <GraphicItem ID="1" GraphicFile="GSDML-02EB-0001-AG2X"/>
+      </GraphicsList>
+
+<!-- ============================================================================================ -->
+<!--   List of categorys                                                                          -->
+<!-- ============================================================================================ -->
+
+      <CategoryList>
+        <CategoryItem ID="CAT_REF_IN_MODULES" TextId="T_ID_CAT_REF_IN_MODULES"/>
+        <CategoryItem ID="CAT_REF_OUT_MODULES" TextId="T_ID_CAT_REF_OUT_MODULES"/>
+      </CategoryList>
+
+<!-- ============================================================================================ -->
+<!--   ExternalTextList                                                                           -->
+<!-- ============================================================================================ -->
+      <ExternalTextList>
+        <PrimaryLanguage>
+          <!-- Identification -->
+          <Text TextId="T_ID_DAP" Value="DAP"/>
+          <Text TextId="T_ID_DEV_DESCRIPTION" Value="SIKO DriveLine AG2X EPN"/>
+          <Text TextId="T_ID_DAP_DESCRIPTION" Value="Supports RT, IRT and non-cyclic communications"/>
+          <Text TextId="T_ID_SS_INTERFACE" Value="X1"/>
+          <Text TextId="T_ID_SS_PORT1" Value="P1"/>
+          <Text TextId="T_ID_SS_PORT2" Value="P2"/>
+          <Text TextId="T_ID_INTERFACE" Value="Interface"/>
+          <Text TextId="T_ID_PORT1" Value="Port 1"/>
+          <Text TextId="T_ID_PORT2" Value="Port 2"/>
+
+          <!-- Vendor module category -->
+          <Text TextId="T_ID_CAT_REF_IN_MODULES" Value="Input"/>
+          <Text TextId="T_ID_CAT_REF_OUT_MODULES" Value="Output"/>
+
+          <!-- Vendor module texts -->
+          <Text TextId="T_ID_INPUT" Value="Input"/>
+          <Text TextId="T_ID_OUTPUT" Value="Output"/>
+
+          <Text TextId="T_ID_INFO_TEXT_ADI" Value="ADI number"/>
+          <Text TextId="T_ID_SUBMOD_INFO_ELEMENT" Value="ADI element"/>
+          <Text TextId="T_ID_SUBMOD_INFO_ELEMENT_GROUP" Value="ADI element group"/>
+
+          <Text TextId="T_ID_MODULE_NAME_ADI2" Value="ControlWord"/>
+          <Text TextId="T_ID_MODULE_NAME_ADI3" Value="TargetValue"/>
+          <Text TextId="T_ID_MODULE_NAME_ADI1" Value="DigitalOutputs"/>
+
+          <Text TextId="T_ID_DATAITEM_ADI2_ELEMENT1" Value="ControlWord"/>
+          <Text TextId="T_ID_DATAITEM_ADI3_ELEMENT1" Value="TargetValue"/>
+          <Text TextId="T_ID_DATAITEM_ADI1_ELEMENT1" Value="DigitalOutputs"/>
+
+          <Text TextId="T_ID_MODULE_NAME_ADI258" Value="StatusWord"/>
+          <Text TextId="T_ID_MODULE_NAME_ADI259" Value="ActualValue"/>
+          <Text TextId="T_ID_MODULE_NAME_ADI257" Value="DigitalInputs"/>
+          
+          <Text TextId="T_ID_DATAITEM_ADI258_ELEMENT1" Value="StatusWord"/>
+          <Text TextId="T_ID_DATAITEM_ADI259_ELEMENT1" Value="ActualValue"/>
+          <Text TextId="T_ID_DATAITEM_ADI257_ELEMENT1" Value="DigitalInputs"/>
+          
+          <!-- Error type name -->
+          <Text TextId="T_ID_NAME_ERROR_TYPE_262" Value="Low battery voltage" />        
+          <Text TextId="T_ID_NAME_ERROR_TYPE_263" Value="Low control electronics voltage" />
+	  <Text TextId="T_ID_NAME_ERROR_TYPE_264" Value="Control electronics overvoltage" />
+          <Text TextId="T_ID_NAME_ERROR_TYPE_265" Value="Power electronics overvoltage" />
+	  <Text TextId="T_ID_NAME_ERROR_TYPE_266" Value="Output stage excess temperature" />
+          <Text TextId="T_ID_NAME_ERROR_TYPE_267" Value="Contouring error" />
+	  <Text TextId="T_ID_NAME_ERROR_TYPE_268" Value="Output shaft blocked" />
+	  <Text TextId="T_ID_NAME_ERROR_TYPE_269" Value="Power electronics not supplied" />
+          <Text TextId="T_ID_NAME_ERROR_TYPE_271" Value="SIN COS monitoring" />			
+          <Text TextId="T_ID_NAME_ERROR_TYPE_272" Value="EEPROM queue overrun" />
+	  <Text TextId="T_ID_NAME_ERROR_TYPE_275" Value="EEPROM check sum" />
+	  <Text TextId="T_ID_NAME_ERROR_TYPE_276" Value="Ethernet module watchdog" />
+	  <Text TextId="T_ID_NAME_ERROR_TYPE_277" Value="Ethernet module in the ERROR status while travel job is active" />
+	  <Text TextId="T_ID_NAME_ERROR_TYPE_278" Value="Ethernet module in the EXCEPTION status" />
+	  
+          <!-- Error type help -->
+	  <Text TextId="T_ID_HELP_ERROR_TYPE_262" Value="empty battery: replace battery, bonding error: check battery bonding, wrong battery type inserted: insert correct battery type" />        
+          <Text TextId="T_ID_HELP_ERROR_TYPE_263" Value="check control operating voltage" />
+	  <Text TextId="T_ID_HELP_ERROR_TYPE_264" Value="check control operating voltage" />
+          <Text TextId="T_ID_HELP_ERROR_TYPE_265" Value="check output stage operating voltage" />
+	  <Text TextId="T_ID_HELP_ERROR_TYPE_266" Value="reduce ambient temperature, reduce load" />
+          <Text TextId="T_ID_HELP_ERROR_TYPE_267" Value="reduce load, reduce acceleration, reduce speed" />
+	  <Text TextId="T_ID_HELP_ERROR_TYPE_268" Value="disengage shaft" />
+	  <Text TextId="T_ID_HELP_ERROR_TYPE_269" Value="check output stage operating voltage" />
+          <Text TextId="T_ID_HELP_ERROR_TYPE_271" Value="shield from stray magnetic fields, check EMC measures" />			
+          <Text TextId="T_ID_HELP_ERROR_TYPE_272" Value="internal error" />
+	  <Text TextId="T_ID_HELP_ERROR_TYPE_275" Value="reset parameters to factory settings" />
+	  <Text TextId="T_ID_HELP_ERROR_TYPE_276" Value="internal error" />
+	  <Text TextId="T_ID_HELP_ERROR_TYPE_277" Value="internal error" />
+	  <Text TextId="T_ID_HELP_ERROR_TYPE_278" Value="internal error, power on reset necessary" />	
+
+       </PrimaryLanguage>
+      </ExternalTextList>
+    </ApplicationProcess>
+  </ProfileBody>
+</ISO15745Profile>

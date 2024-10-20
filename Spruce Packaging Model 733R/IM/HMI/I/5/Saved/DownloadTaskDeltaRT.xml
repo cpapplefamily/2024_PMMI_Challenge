@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<DownloadTask xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ProjectInfo ProjectId="a008c45f-af2a-4410-9045-0dfb40a57073" ESProjectName="Spruce Packaging Model 733R" ESDeviceName="HMI_RT_2" RtProjectFolderName="Spruce Packaging Model 733R.HMI_1[MTP700 Unified Comfort]" RtProjectName="Spruce Packaging Model 733R.HMI_1[MTP700 Unified Comfort]" DeviceType="MTP700 Unified Comfort" DeviceVersion="19.0.0.0" CreationTime="12/20/2023 07:30:50" RuntimeAddonFolderName="UCP_7_22" FirmwareFileName="" RuntimeFileName="" PRCV="5.0.0.1" RTCV="16.0.0.0" RTReleaseNo="19.0.0.0" ImageReleaseNo="19.0.0.0" />
+  <DeltaDownload>deltas\721\cds.rdf</DeltaDownload>
+  <DeltaDownload>deltas\721\ChromIdentification.rdf</DeltaDownload>
+  <DeltaDownload>deltas\721\deltaConfig_DistributionInfo.rdf</DeltaDownload>
+  <DeltaDownload>deltas\721\deltaConfig_DpValue.rdf</DeltaDownload>
+  <DeltaDownload>deltas\721\deltaConfig_LicenseCounter.rdf</DeltaDownload>
+  <DeltaDownload>deltas\721\deltaConfig_PeripheralAddress.rdf</DeltaDownload>
+  <DeltaDownload>deltas\721\deltaConfig_Smoothing.rdf</DeltaDownload>
+  <DeltaDownload>deltas\721\deltaDpIdentification.rdf</DeltaDownload>
+  <DeltaDownload>deltas\721\deltaES2RTID.rdf</DeltaDownload>
+  <DeltaDownload>deltas\721\deltaImageLibrary_1033.rdf</DeltaDownload>
+  <DeltaDownload>deltas\721\deltaMain.rdf</DeltaDownload>
+  <DeltaDownload>deltas\721\deltaTextLibrary_136_1033.rdf</DeltaDownload>
+  <DeltaDownload>deltas\721\deltaTextLibrary_2_1033.rdf</DeltaDownload>
+  <DeltaDownload>deltas\721\ProjectCharacteristics.rdf</DeltaDownload>
+  <DeltaDownload>deltas\721\config\config.level</DeltaDownload>
+  <DeltaDownload>deltas\721\screens\screen_1046.rdf</DeltaDownload>
+  <DeltaDownload>deltas\721\screens\screen_303.rdf</DeltaDownload>
+  <DeltaDownload>deltas\721\screens\screen_839.rdf</DeltaDownload>
+</DownloadTask>

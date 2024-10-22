@@ -2,7 +2,7 @@
 #Don't do changes manually
 
 [DomainFunctions]
-DF1 = "S7PlusCommunication"
+DF1 = "S7PlusCommunicationSim"
 DF2 = "RTS"
 
 [general]
@@ -11,7 +11,7 @@ valueChangeTimeDiff = 180
 [opcua]
 allowDuplicateOutputAddresses = 1
 
-[DF_S7PlusCommunication]
+[DF_S7PlusCommunicationSim]
 ManagerNumber = 1
 
 [s7]

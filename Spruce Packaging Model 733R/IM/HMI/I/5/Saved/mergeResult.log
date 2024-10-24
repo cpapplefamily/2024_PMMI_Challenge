@@ -1,205 +1,173 @@
 **********************
 * MERGE PROGRESS LOG *
 **********************
-[2024-10-23 19:08:08] [INFO]: Starting merge for Project: C:\Users\Robotics\Documents\2024_PMMI_Challenge\Spruce Packaging Model 733R\IM\HMI\I\5\Context.wrk
-[2024-10-23 19:08:08] [INFO]: Setting up Full Project Merge...
-[2024-10-23 19:08:08] [WARNING]: Open optional file failed: C:\Users\Robotics\Documents\2024_PMMI_Challenge\Spruce Packaging Model 733R\IM\HMI\I\5\Context.wrk\system\runtime.rdf
-[2024-10-23 19:08:08] [WARNING]: Open optional file failed: C:\Users\Robotics\Documents\2024_PMMI_Challenge\Spruce Packaging Model 733R\IM\HMI\I\5\Context.wrk\system\persistent.rdf
-[2024-10-23 19:08:08] [WARNING]: Open optional file failed: C:\Users\Robotics\Documents\2024_PMMI_Challenge\Spruce Packaging Model 733R\IM\HMI\I\5\Context.wrk\deltas\800\runtime.rdf
-[2024-10-23 19:08:08] [WARNING]: Open optional file failed: C:\Users\Robotics\Documents\2024_PMMI_Challenge\Spruce Packaging Model 733R\IM\HMI\I\5\Context.wrk\deltas\800\persistent.rdf
-[2024-10-23 19:08:08] [INFO]: Number of Jobs to execute: 97
-[2024-10-23 19:08:08] [INFO]: Starting Job number 1: MERGE JOB
-[2024-10-23 19:08:08] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:08] [INFO]: Starting Job number 2: MERGE JOB
-[2024-10-23 19:08:08] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:08] [INFO]: Starting Job number 3: MERGE JOB
-[2024-10-23 19:08:08] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:08] [INFO]: Starting Job number 4: MERGE JOB
-[2024-10-23 19:08:08] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:08] [INFO]: Starting Job number 5: MERGE JOB
-[2024-10-23 19:08:08] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:08] [INFO]: Starting Job number 6: MERGE JOB
-[2024-10-23 19:08:08] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:08] [INFO]: Starting Job number 7: MERGE JOB
-[2024-10-23 19:08:08] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:08] [INFO]: Starting Job number 8: JOIN JOB
-[2024-10-23 19:08:08] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:08] [INFO]: Starting Job number 9: FINALIZE JOB
-[2024-10-23 19:08:08] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:08] [INFO]: Starting Job number 10: DELETE JOB
-[2024-10-23 19:08:08] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:08] [INFO]: Starting Job number 11: DELETE JOB
-[2024-10-23 19:08:08] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:08] [INFO]: Starting Job number 12: DELETE JOB
-[2024-10-23 19:08:08] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:08] [INFO]: Starting Job number 13: DELETE JOB
-[2024-10-23 19:08:08] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:08] [INFO]: Starting Job number 14: DELETE JOB
-[2024-10-23 19:08:08] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:08] [INFO]: Starting Job number 15: DELETE JOB
-[2024-10-23 19:08:08] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:08] [INFO]: Starting Job number 16: DELETE JOB
-[2024-10-23 19:08:08] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:08] [INFO]: Starting Job number 17: MERGE JOB
-[2024-10-23 19:08:08] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:08] [INFO]: Starting Job number 18: MERGE JOB
-[2024-10-23 19:08:08] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:08] [INFO]: Starting Job number 19: MERGE JOB
-[2024-10-23 19:08:08] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:08] [INFO]: Starting Job number 20: MERGE JOB
-[2024-10-23 19:08:08] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:08] [INFO]: Starting Job number 21: MERGE JOB
-[2024-10-23 19:08:08] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:08] [INFO]: Starting Job number 22: MERGE JOB
-[2024-10-23 19:08:08] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:08] [INFO]: Starting Job number 23: MERGE JOB
-[2024-10-23 19:08:08] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:08] [INFO]: Starting Job number 24: JOIN JOB
-[2024-10-23 19:08:08] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:08] [INFO]: Starting Job number 25: FINALIZE JOB
-[2024-10-23 19:08:08] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:08] [INFO]: Starting Job number 26: DELETE JOB
-[2024-10-23 19:08:08] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:08] [INFO]: Starting Job number 27: DELETE JOB
-[2024-10-23 19:08:08] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:08] [INFO]: Starting Job number 28: DELETE JOB
-[2024-10-23 19:08:08] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:08] [INFO]: Starting Job number 29: DELETE JOB
-[2024-10-23 19:08:08] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:08] [INFO]: Starting Job number 30: DELETE JOB
-[2024-10-23 19:08:08] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:08] [INFO]: Starting Job number 31: DELETE JOB
-[2024-10-23 19:08:08] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:08] [INFO]: Starting Job number 32: DELETE JOB
-[2024-10-23 19:08:08] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:08] [INFO]: Starting Job number 33: MERGE JOB
-[2024-10-23 19:08:08] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:08] [INFO]: Starting Job number 34: MERGE JOB
-[2024-10-23 19:08:08] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:08] [INFO]: Starting Job number 35: MERGE JOB
-[2024-10-23 19:08:08] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:08] [INFO]: Starting Job number 36: MERGE JOB
-[2024-10-23 19:08:08] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:08] [INFO]: Starting Job number 37: MERGE JOB
-[2024-10-23 19:08:08] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:08] [INFO]: Starting Job number 38: MERGE JOB
-[2024-10-23 19:08:08] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:08] [INFO]: Starting Job number 39: MERGE JOB
-[2024-10-23 19:08:08] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:08] [INFO]: Starting Job number 40: JOIN JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 41: FINALIZE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 42: DELETE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 43: DELETE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 44: DELETE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 45: DELETE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 46: DELETE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 47: DELETE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 48: DELETE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 49: MERGE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 50: MERGE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 51: MERGE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 52: JOIN JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 53: MERGE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 54: JOIN JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 55: MERGE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 56: MERGE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 57: JOIN JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 58: MERGE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 59: MERGE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 60: JOIN JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 61: MERGE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 62: MERGE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 63: JOIN JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 64: MERGE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 65: JOIN JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 66: MERGE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 67: JOIN JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 68: MERGE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 69: MERGE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 70: JOIN JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 71: MERGE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 72: JOIN JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 73: FINALIZE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 74: DELETE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 75: DELETE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 76: FINALIZE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 77: DELETE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 78: DELETE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 79: FINALIZE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 80: DELETE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 81: DELETE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 82: FINALIZE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 83: DELETE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 84: FINALIZE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 85: DELETE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 86: DELETE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 87: FINALIZE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 88: DELETE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 89: DELETE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 90: FINALIZE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 91: DELETE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 92: FINALIZE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 93: DELETE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 94: DELETE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 95: DELETE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 96: FINALIZE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: Starting Job number 97: DELETE JOB
-[2024-10-23 19:08:09] [INFO]: The job was executed succesfully.
-[2024-10-23 19:08:09] [INFO]: DONE! Merge succeeded
+[2024-10-23 20:18:30] [INFO]: Starting merge for Project: C:\Users\Robotics\Documents\2024_PMMI_Challenge\Spruce Packaging Model 733R\IM\HMI\I\5\Context.wrk
+[2024-10-23 20:18:30] [INFO]: Setting up Full Project Merge...
+[2024-10-23 20:18:30] [WARNING]: Open optional file failed: C:\Users\Robotics\Documents\2024_PMMI_Challenge\Spruce Packaging Model 733R\IM\HMI\I\5\Context.wrk\system\runtime.rdf
+[2024-10-23 20:18:30] [WARNING]: Open optional file failed: C:\Users\Robotics\Documents\2024_PMMI_Challenge\Spruce Packaging Model 733R\IM\HMI\I\5\Context.wrk\system\persistent.rdf
+[2024-10-23 20:18:31] [WARNING]: Open optional file failed: C:\Users\Robotics\Documents\2024_PMMI_Challenge\Spruce Packaging Model 733R\IM\HMI\I\5\Context.wrk\deltas\804\runtime.rdf
+[2024-10-23 20:18:31] [WARNING]: Open optional file failed: C:\Users\Robotics\Documents\2024_PMMI_Challenge\Spruce Packaging Model 733R\IM\HMI\I\5\Context.wrk\deltas\804\persistent.rdf
+[2024-10-23 20:18:31] [INFO]: Number of Jobs to execute: 81
+[2024-10-23 20:18:31] [INFO]: Starting Job number 1: MERGE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 2: MERGE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 3: MERGE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 4: MERGE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 5: MERGE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 6: MERGE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 7: MERGE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 8: JOIN JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 9: FINALIZE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 10: DELETE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 11: DELETE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 12: DELETE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 13: DELETE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 14: DELETE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 15: DELETE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 16: DELETE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 17: MERGE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 18: MERGE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 19: MERGE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 20: MERGE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 21: MERGE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 22: MERGE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 23: MERGE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 24: JOIN JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 25: FINALIZE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 26: DELETE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 27: DELETE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 28: DELETE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 29: DELETE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 30: DELETE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 31: DELETE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 32: DELETE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 33: MERGE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 34: MERGE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 35: MERGE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 36: JOIN JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 37: MERGE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 38: JOIN JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 39: MERGE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 40: MERGE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 41: JOIN JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 42: MERGE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 43: MERGE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 44: JOIN JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 45: MERGE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 46: MERGE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 47: JOIN JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 48: MERGE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 49: JOIN JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 50: MERGE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 51: JOIN JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 52: MERGE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 53: MERGE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 54: JOIN JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 55: MERGE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 56: JOIN JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 57: FINALIZE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 58: DELETE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 59: DELETE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 60: FINALIZE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 61: DELETE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 62: DELETE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 63: FINALIZE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 64: DELETE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 65: FINALIZE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 66: DELETE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 67: DELETE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 68: FINALIZE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 69: DELETE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 70: DELETE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 71: FINALIZE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 72: DELETE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 73: DELETE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 74: FINALIZE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 75: DELETE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 76: FINALIZE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 77: DELETE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 78: DELETE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 79: DELETE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 80: FINALIZE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: Starting Job number 81: DELETE JOB
+[2024-10-23 20:18:31] [INFO]: The job was executed succesfully.
+[2024-10-23 20:18:31] [INFO]: DONE! Merge succeeded
